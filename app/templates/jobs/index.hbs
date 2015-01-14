@@ -1,0 +1,25 @@
+<div class="page-header">
+    <h1>Jobs</h1>
+</div>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Publish At</th>
+            <th>Close At</th>
+        </tr>
+    </thead>
+    <tbody class="relative">
+        {{#each job in model}}
+            <tr>
+                <td>{{#link-to "jobs.job" job.id}}{{job.title}}{{/link-to}}</td>
+                <td>{{job.publishAt}}</td>
+                <td>{{job.closeAt}}</td>
+            </tr>
+        {{else}}
+            <tr>
+                <td colspan="2" class="text-center">None</td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>

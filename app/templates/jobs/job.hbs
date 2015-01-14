@@ -1,0 +1,22 @@
+<div class="page-header">
+    <h1>{{title}}</h1>
+</div>
+<div class="row">
+    <div class="col-sm-3 visible-xs">
+        <ul class="nav nav-tabs">
+            {{#link-to "jobs.job.index" model tagName="li" href=false}}{{#link-to "jobs.job.index" model}}Details{{/link-to}}{{/link-to}}
+            {{#link-to "jobs.job.edit" model tagName="li" href=false}}{{#link-to "jobs.job.edit" model}}Edit{{/link-to}}{{/link-to}}
+        </ul>
+    </div>
+    <div class="col-sm-9">
+        <div class="well">
+            {{outlet}}
+        </div>
+    </div>
+    <div class="col-sm-3 hidden-xs">
+        <ul class="nav nav-pills nav-stacked">
+            {{#link-to "jobs.job.index" model tagName="li" href=false}}{{#link-to "jobs.job.index" model}}Details{{/link-to}}{{/link-to}}
+            {{#link-to "jobs.job.edit" model tagName="li" href=false}}{{#link-to "jobs.job.edit" model}}Edit{{/link-to}}{{/link-to}}
+        </ul>
+    </div>
+</div>

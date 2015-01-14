@@ -1,0 +1,54 @@
+<div class="row margin-bottom-10">
+    <div class="col-sm-3 text-right-not-xs"><strong>ID</strong></div>
+    <div class="col-sm-9">{{id}}</div>
+</div>
+<div class="row margin-bottom-10">
+    <div class="col-sm-3 text-right-not-xs"><strong>Title</strong></div>
+    <div class="col-sm-9">{{title}}</div>
+</div>
+<div class="row margin-bottom-10">
+    <div class="col-sm-3 text-right-not-xs"><strong>Publish At</strong></div>
+    <div class="col-sm-9">{{publishAt}}</div>
+</div>
+<div class="row margin-bottom-10">
+    <div class="col-sm-3 text-right-not-xs"><strong>Close At</strong></div>
+    <div class="col-sm-9">{{closeAt}}</div>
+</div>
+<div class="row margin-bottom-10">
+    <div class="col-sm-3 text-right-not-xs"><strong>Categories</strong></div>
+    <div class="col-sm-9">
+        <ul>
+            {{#each category in categories}}
+                <li>{{category}}</li>
+            {{/each}}
+        </ul>
+    </div>
+</div>
+<div class="row margin-bottom-10">
+    <div class="col-sm-3 text-right-not-xs"><strong>Types</strong></div>
+    <div class="col-sm-9">
+        <ul>
+            {{#each type in types}}
+                <li>{{type.name}}</li>
+            {{/each}}
+        </ul>
+    </div>
+</div>
+<div class="row margin-bottom-10">
+    <div class="col-sm-3 text-right-not-xs"><strong>Application</strong></div>
+    <div class="col-sm-9">
+        Type: {{application.type}}<br />
+        {{#if application.emails}}
+            <ul>
+                {{#each email in application.emails}}
+                    <li>{{email}}</li>
+                {{/each}}
+            </ul>
+        {{/if}}
+        {{#if application.url}}
+            <ul>
+                <li>{{application.url}}</li>
+            </ul>
+        {{/if}}
+    </div>
+</div>

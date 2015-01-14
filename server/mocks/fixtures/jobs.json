@@ -1,0 +1,35 @@
+﻿[
+    {
+	    "id":1,
+	    "publishAt":"2015-01-01",
+	    "closeAt":"2015-03-01",
+	    "title": "Mechanical Engineer",
+	    "categories":[
+		    "Engineering",
+		    "Manufacturing"
+	    ],
+	    "types": [1,2],
+	    "application": {
+		    "type": "email",
+		    "emails": [
+			    "foo@test.com",
+                "bar@test.com"
+		    ]
+	    }
+    },
+    {
+	    "id":2,
+	    "publishAt":"2015-01-01",
+	    "closeAt":"2015-03-01",
+	    "title": "Chemical Engineer",
+	    "categories":[
+		    "Engineering",
+		    "Science"
+	    ],
+	    "types": [1],
+	    "application": {
+		    "type": "url",
+		    "url": "http://foo.com"
+	    }
+    }
+]
