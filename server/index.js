@@ -13,6 +13,9 @@ module.exports = function (app) {
     var mocks = globSync('./mocks/**/*.js', { cwd: __dirname }).map(require);
     var proxies = globSync('./proxies/**/*.js', { cwd: __dirname }).map(require);
 
+    if (process.env.DISABLE_MOCK === 'true')
+        return;
+
     app.use(bodyParser.json());
 
     // Log proxy requests
