@@ -24,8 +24,12 @@ module.exports = function (app) {
     });
 
     jobsRouter.put('/:id', function (req, res) {
+        
+        var job = req.body.job;
+        job.id = req.params.id;
+
         res.send({
-            job: req.body.job,
+            job: job,
             jobTypes: jobTypesFixture
         });
     });

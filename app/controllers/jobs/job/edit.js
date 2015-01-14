@@ -5,7 +5,7 @@ export default Ember.Controller.extend({
     actions: {
         save: function() {
             this.get('model').save().then(function (model) {
-                this.transitionToRoute('job', model);
+                this.transitionToRoute('jobs.job', model);
             }.bind(this));
         }
     }
