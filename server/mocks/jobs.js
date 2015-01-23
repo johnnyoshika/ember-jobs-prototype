@@ -13,7 +13,14 @@ module.exports = function (app) {
     });
 
     jobsRouter.post('/', function (req, res) {
-        res.status(201).end();
+
+        var job = req.body.job;
+        job.id = new Date().getTime();
+
+        res.status(201).send({
+            job: job,
+            jobTypes: jobTypesFixture
+        });
     });
 
     jobsRouter.get('/:id', function (req, res) {

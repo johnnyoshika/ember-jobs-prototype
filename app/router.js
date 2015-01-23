@@ -9,7 +9,9 @@ Router.map(function() {
     this.route('jobs', function() {
         this.route('job', {path: ':job_id'}, function() {
           this.route('edit');
+          this.route("delete");
         });
+        this.route("new");
     });
     this.route('job-types');
 });
