@@ -11,7 +11,7 @@ Router.map(function() {
           this.route('edit');
         });
     });
-    this.route('types');
+    this.route('job-types');
 });
 
 export default Router;

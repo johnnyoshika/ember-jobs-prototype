@@ -11,15 +11,15 @@
     </thead>
     <tbody class="relative">
         {{#each job in model}}
-            <tr>
-                <td>{{#link-to "jobs.job" job.id}}{{job.title}}{{/link-to}}</td>
-                <td>{{job.publishAt}}</td>
-                <td>{{job.closeAt}}</td>
-            </tr>
+        <tr>
+            <td>{{#link-to "jobs.job" job.id}}{{job.title}}{{/link-to}}</td>
+            <td>{{job.publishAt}}</td>
+            <td>{{job.closeAt}}</td>
+        </tr>
         {{else}}
-            <tr>
-                <td colspan="2" class="text-center">None</td>
-            </tr>
+        <tr>
+            <td colspan="2" class="text-center">None</td>
+        </tr>
         {{/each}}
     </tbody>
 </table>
