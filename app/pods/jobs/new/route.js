@@ -11,6 +11,10 @@ export default Ember.Route.extend({
             this.modelFor(this.routeName).save().then(function (model) {
                 this.transitionTo('jobs.job', model);
             }.bind(this));
+        },
+
+        saveDraft: function() {
+            console.log('saveDraft');
         }
     }
 
